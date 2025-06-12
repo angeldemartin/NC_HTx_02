@@ -420,10 +420,10 @@ changes </a>
 <div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R
-Markdown file created these results, you’ll want to first commit it to
-the Git repo. If you’re still working on the analysis, you can ignore
-this warning. When you’re finished, you can run
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
 <code>wflow_publish</code> to commit the R Markdown file and build the
 HTML.</p>
 </div>
@@ -542,15 +542,15 @@ data
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02treeb25970c279c6cb3cbfc030f5033f744f300ae42atargetblankb25970ca">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree609d3752e2f6780bffe64f6909b699860130c99btargetblank609d375a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/angeldemartin/NC_HTx_02/tree/b25970c279c6cb3cbfc030f5033f744f300ae42a" target="_blank">b25970c</a>
+<a href="https://github.com/angeldemartin/NC_HTx_02/tree/609d3752e2f6780bffe64f6909b699860130c99b" target="_blank">609d375</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02treeb25970c279c6cb3cbfc030f5033f744f300ae42atargetblankb25970ca"
+id="strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree609d3752e2f6780bffe64f6909b699860130c99btargetblank609d375a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -560,7 +560,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/angeldemartin/NC_HTx_02/tree/b25970c279c6cb3cbfc030f5033f744f300ae42a" target="_blank">b25970c</a>.
+<a href="https://github.com/angeldemartin/NC_HTx_02/tree/609d3752e2f6780bffe64f6909b699860130c99b" target="_blank">609d375</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -578,12 +578,12 @@ Ignored files:
     Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+    Ignored:    analysis/figure/
     Ignored:    data/NG-A5307/
     Ignored:    data/Ref/
 
-Untracked files:
-    Untracked:  analysis/CF.Rmd
-    Untracked:  analysis/CM.Rmd
+Unstaged changes:
+    Modified:   analysis/CM.Rmd
 
 </code></pre>
 <p>
@@ -599,9 +599,88 @@ have uncommitted changes.
 </div>
 <div id="versions" class="tab-pane fade">
 <p>
-There are no past versions. Publish this analysis with
-<code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/CM.Rmd</code>) and HTML
+(<code>docs/CM.html</code>) files. If you’ve configured a remote Git
+repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
+in the table below to view the files as they were in that past version.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/609d3752e2f6780bffe64f6909b699860130c99b/analysis/CM.Rmd" target="_blank">609d375</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+<td>
+june12.3.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/analysis/CM.Rmd" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+<td>
+june12
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/angeldemartin/NC_HTx_02/0e513f302cc24612a18d930198d76c7afb23851d/docs/CM.html" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+<td>
+june12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
@@ -722,9 +801,85 @@ lambda &lt;- 10^seq(from = -1, to = 2, length = 1000)
 cts &lt;- matrix(rpois(1000*100, lambda), ncol = 100)
 meanSdPlot(cts, ranks = FALSE)</code></pre>
 <p><img src="figure/CM.Rmd/construct%20DESeqDataSet%20object%20stim2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-construct-DESeqDataSet-object-stim2-1">
+Past versions of "construct DESeqDataSet object stim2-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-construct-DESeqDataSet-object-stim2-1"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/construct DESeqDataSet object stim2-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>log.cts.one &lt;- log2(cts + 1)
 meanSdPlot(log.cts.one, ranks = FALSE)</code></pre>
 <p><img src="figure/CM.Rmd/construct%20DESeqDataSet%20object%20stim2-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-construct-DESeqDataSet-object-stim2-2">
+Past versions of "construct DESeqDataSet object stim2-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-construct-DESeqDataSet-object-stim2-2"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/construct DESeqDataSet object stim2-2.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>vsd &lt;- vst(dds, blind = FALSE)
 rld &lt;- rlog(dds, blind = FALSE)
 
@@ -745,6 +900,44 @@ df$transformation &lt;- factor(df$transformation, levels=lvls)
 ggplot(df, aes(x = x, y = y)) + geom_hex(bins = 80) +
   coord_fixed() + facet_grid( . ~ transformation)  </code></pre>
 <p><img src="figure/CM.Rmd/construct%20DESeqDataSet%20object%20stim2-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-construct-DESeqDataSet-object-stim2-3">
+Past versions of "construct DESeqDataSet object stim2-3.png"
+</button>
+</p>
+<div id="fig-no-spaces-construct-DESeqDataSet-object-stim2-3"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/construct DESeqDataSet object stim2-3.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="sample-distance" class="section level3">
 <h3>sample distance</h3>
@@ -760,12 +953,86 @@ pheatmap(sampleDistMatrix,
          clustering_distance_cols = sampleDists,
          col = colors)</code></pre>
 <p><img src="figure/CM.Rmd/distance%20heatmap-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-distance-heatmap-1">
+Past versions of "distance heatmap-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-distance-heatmap-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/distance heatmap-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>colors &lt;- colorRampPalette(rev(brewer.pal(9, &quot;Blues&quot;)) )(255)
 pheatmap(sampleDistMatrix,
          clustering_distance_rows = sampleDists,
          clustering_distance_cols = sampleDists,
          col = colors)</code></pre>
 <p><img src="figure/CM.Rmd/distance%20heatmap-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-distance-heatmap-2">
+Past versions of "distance heatmap-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-distance-heatmap-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/distance heatmap-2.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="distance-mds" class="section level3">
 <h3>distance MDS</h3>
@@ -777,6 +1044,43 @@ plotPCA(rld, intgroup = c(&quot;stim&quot;, &quot;pc&quot;)) +
   geom_point(aes(color = stim), size = 8, alpha = 0.8) +
   scale_color_manual(values = colCond) # size = dot size, alpha = transparency</code></pre>
 <p><img src="figure/CM.Rmd/vis%20dim%20red%20bulk-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-vis-dim-red-bulk-1">
+Past versions of "vis dim red bulk-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-vis-dim-red-bulk-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/vis dim red bulk-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>mds &lt;- as.data.frame(colData(rld))  %&gt;%
          cbind(cmdscale(sampleDistMatrix))
 ggplot(mds, aes(x = `1`, y = `2`, color = stim, shape = pc)) +
@@ -784,6 +1088,43 @@ ggplot(mds, aes(x = `1`, y = `2`, color = stim, shape = pc)) +
   scale_color_manual(values = colCond) +
   geom_point(size = 4) + coord_fixed() + ggtitle(&quot;MDS with rld data&quot;)</code></pre>
 <p><img src="figure/CM.Rmd/vis%20dim%20red%20bulk-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-vis-dim-red-bulk-2">
+Past versions of "vis dim red bulk-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-vis-dim-red-bulk-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/vis dim red bulk-2.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="diff-expressed-in-bmp4-vs-ctr" class="section level3">
 <h3>diff expressed in BMP4 vs ctr</h3>
@@ -847,6 +1188,43 @@ heat_colors &lt;- colorRampPalette(c(&quot;#2166AC&quot;, &quot;#F7F7F7&quot;, &
 pheatmap(mat, annotation_col = anno, annotation_colors = ann_colors, scale = &quot;row&quot;,
          labels_row = namesDat$hgnc_symbol, color = heat_colors, labels_col = rep(&quot;&quot;, ncol(mat)))</code></pre>
 <p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20heatmap-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-heatmap-1">
+Past versions of "top 50 BMP vs ctr heatmap-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-heatmap-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr heatmap-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="top-100-heatmap" class="section level3">
 <h3>top 100 heatmap</h3>
@@ -877,6 +1255,43 @@ heat_colors &lt;- colorRampPalette(c(&quot;#2166AC&quot;, &quot;#F7F7F7&quot;, &
 pheatmap(mat, annotation_col = anno, annotation_colors = ann_colors, scale = &quot;row&quot;,
          labels_row = namesDat$hgnc_symbol, color = heat_colors, labels_col = rep(&quot;&quot;, ncol(mat)))</code></pre>
 <p><img src="figure/CM.Rmd/top%20100%20BMP%20vs%20ctr%20heatmap-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-100-BMP-vs-ctr-heatmap-1">
+Past versions of "top 100 BMP vs ctr heatmap-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-100-BMP-vs-ctr-heatmap-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 100 BMP vs ctr heatmap-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="top-50-indiv-counts" class="section level3">
 <h3>top 50 indiv counts</h3>
@@ -892,7 +1307,1956 @@ for(ID in topGenesID){
              col=colCond[factor(dds$stim)],
              pch = 19)
 }</code></pre>
-<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-1.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-2.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-3.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-4.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-5.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-6.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-7.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-8.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-9.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-10.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-11.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-12.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-13.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-14.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-15.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-16.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-17.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-18.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-19.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-20.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-21.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-22.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-23.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-24.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-25.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-26.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-27.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-28.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-29.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-30.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-31.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-32.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-33.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-34.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-35.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-36.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-37.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-38.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-39.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-40.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-41.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-42.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-43.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-44.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-45.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-46.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-47.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-48.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-49.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-50.png" width="576" style="display: block; margin: auto;" /></p>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-1">
+Past versions of "top 50 BMP vs ctr indiv counts-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-1"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-2.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-2">
+Past versions of "top 50 BMP vs ctr indiv counts-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-2"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-2.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-3.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-3">
+Past versions of "top 50 BMP vs ctr indiv counts-3.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-3"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-3.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-4.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-4">
+Past versions of "top 50 BMP vs ctr indiv counts-4.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-4"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-4.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-5.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-5">
+Past versions of "top 50 BMP vs ctr indiv counts-5.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-5"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-5.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-6.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-6">
+Past versions of "top 50 BMP vs ctr indiv counts-6.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-6"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-6.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-7.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-7">
+Past versions of "top 50 BMP vs ctr indiv counts-7.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-7"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-7.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-8.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-8">
+Past versions of "top 50 BMP vs ctr indiv counts-8.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-8"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-8.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-9.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-9">
+Past versions of "top 50 BMP vs ctr indiv counts-9.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-9"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-9.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-10.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-10">
+Past versions of "top 50 BMP vs ctr indiv counts-10.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-10"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-10.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-11.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-11">
+Past versions of "top 50 BMP vs ctr indiv counts-11.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-11"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-11.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-12.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-12">
+Past versions of "top 50 BMP vs ctr indiv counts-12.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-12"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-12.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-13.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-13">
+Past versions of "top 50 BMP vs ctr indiv counts-13.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-13"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-13.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-14.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-14">
+Past versions of "top 50 BMP vs ctr indiv counts-14.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-14"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-14.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-15.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-15">
+Past versions of "top 50 BMP vs ctr indiv counts-15.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-15"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-15.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-16.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-16">
+Past versions of "top 50 BMP vs ctr indiv counts-16.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-16"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-16.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-17.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-17">
+Past versions of "top 50 BMP vs ctr indiv counts-17.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-17"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-17.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-18.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-18">
+Past versions of "top 50 BMP vs ctr indiv counts-18.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-18"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-18.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-19.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-19">
+Past versions of "top 50 BMP vs ctr indiv counts-19.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-19"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-19.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-20.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-20">
+Past versions of "top 50 BMP vs ctr indiv counts-20.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-20"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-20.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-21.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-21">
+Past versions of "top 50 BMP vs ctr indiv counts-21.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-21"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-21.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-22.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-22">
+Past versions of "top 50 BMP vs ctr indiv counts-22.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-22"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-22.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-23.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-23">
+Past versions of "top 50 BMP vs ctr indiv counts-23.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-23"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-23.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-24.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-24">
+Past versions of "top 50 BMP vs ctr indiv counts-24.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-24"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-24.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-25.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-25">
+Past versions of "top 50 BMP vs ctr indiv counts-25.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-25"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-25.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-26.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-26">
+Past versions of "top 50 BMP vs ctr indiv counts-26.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-26"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-26.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-27.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-27">
+Past versions of "top 50 BMP vs ctr indiv counts-27.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-27"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-27.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-28.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-28">
+Past versions of "top 50 BMP vs ctr indiv counts-28.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-28"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-28.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-29.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-29">
+Past versions of "top 50 BMP vs ctr indiv counts-29.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-29"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-29.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-30.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-30">
+Past versions of "top 50 BMP vs ctr indiv counts-30.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-30"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-30.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-31.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-31">
+Past versions of "top 50 BMP vs ctr indiv counts-31.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-31"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-31.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-32.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-32">
+Past versions of "top 50 BMP vs ctr indiv counts-32.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-32"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-32.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-33.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-33">
+Past versions of "top 50 BMP vs ctr indiv counts-33.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-33"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-33.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-34.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-34">
+Past versions of "top 50 BMP vs ctr indiv counts-34.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-34"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-34.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-35.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-35">
+Past versions of "top 50 BMP vs ctr indiv counts-35.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-35"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-35.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-36.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-36">
+Past versions of "top 50 BMP vs ctr indiv counts-36.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-36"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-36.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-37.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-37">
+Past versions of "top 50 BMP vs ctr indiv counts-37.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-37"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-37.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-38.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-38">
+Past versions of "top 50 BMP vs ctr indiv counts-38.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-38"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-38.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-39.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-39">
+Past versions of "top 50 BMP vs ctr indiv counts-39.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-39"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-39.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-40.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-40">
+Past versions of "top 50 BMP vs ctr indiv counts-40.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-40"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-40.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-41.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-41">
+Past versions of "top 50 BMP vs ctr indiv counts-41.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-41"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-41.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-42.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-42">
+Past versions of "top 50 BMP vs ctr indiv counts-42.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-42"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-42.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-43.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-43">
+Past versions of "top 50 BMP vs ctr indiv counts-43.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-43"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-43.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-44.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-44">
+Past versions of "top 50 BMP vs ctr indiv counts-44.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-44"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-44.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-45.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-45">
+Past versions of "top 50 BMP vs ctr indiv counts-45.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-45"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-45.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-46.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-46">
+Past versions of "top 50 BMP vs ctr indiv counts-46.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-46"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-46.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-47.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-47">
+Past versions of "top 50 BMP vs ctr indiv counts-47.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-47"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-47.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-48.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-48">
+Past versions of "top 50 BMP vs ctr indiv counts-48.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-48"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-48.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-49.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-49">
+Past versions of "top 50 BMP vs ctr indiv counts-49.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-49"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-49.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP%20vs%20ctr%20indiv%20counts-50.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-50">
+Past versions of "top 50 BMP vs ctr indiv counts-50.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP-vs-ctr-indiv-counts-50"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP vs ctr indiv counts-50.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="vulcano" class="section level3">
 <h3>vulcano</h3>
@@ -908,6 +3272,43 @@ EnhancedVolcano(res,
     title = &quot;DeSEQ2 results&quot;,
     subtitle = bquote(italic(&quot;BMP4 vs ctr&quot;)))</code></pre>
 <p><img src="figure/CM.Rmd/vulcano%20BMP%20vs%20ctr-1.png" width="1248" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-vulcano-BMP-vs-ctr-1">
+Past versions of "vulcano BMP vs ctr-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-vulcano-BMP-vs-ctr-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/vulcano BMP vs ctr-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div id="bmp_24h-vs-bmp_48h" class="section level2">
@@ -931,9 +3332,85 @@ lambda &lt;- 10^seq(from = -1, to = 2, length = 1000)
 cts &lt;- matrix(rpois(1000*100, lambda), ncol = 100)
 meanSdPlot(cts, ranks = FALSE)</code></pre>
 <p><img src="figure/CM.Rmd/construct%20DESeqDataSet%20object%20stim-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-construct-DESeqDataSet-object-stim-1">
+Past versions of "construct DESeqDataSet object stim-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-construct-DESeqDataSet-object-stim-1"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/construct DESeqDataSet object stim-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>log.cts.one &lt;- log2(cts + 1)
 meanSdPlot(log.cts.one, ranks = FALSE)</code></pre>
 <p><img src="figure/CM.Rmd/construct%20DESeqDataSet%20object%20stim-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-construct-DESeqDataSet-object-stim-2">
+Past versions of "construct DESeqDataSet object stim-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-construct-DESeqDataSet-object-stim-2"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/construct DESeqDataSet object stim-2.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>vsd &lt;- vst(dds, blind = FALSE)
 rld &lt;- rlog(dds, blind = FALSE)
 
@@ -954,6 +3431,44 @@ df$transformation &lt;- factor(df$transformation, levels=lvls)
 ggplot(df, aes(x = x, y = y)) + geom_hex(bins = 80) +
   coord_fixed() + facet_grid( . ~ transformation)  </code></pre>
 <p><img src="figure/CM.Rmd/construct%20DESeqDataSet%20object%20stim-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-construct-DESeqDataSet-object-stim-3">
+Past versions of "construct DESeqDataSet object stim-3.png"
+</button>
+</p>
+<div id="fig-no-spaces-construct-DESeqDataSet-object-stim-3"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/construct DESeqDataSet object stim-3.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="diff-expressed-in-bmp_48h-vs-bmp_24h" class="section level3">
 <h3>diff expressed in BMP_48h vs BMP_24h</h3>
@@ -1011,6 +3526,44 @@ heat_colors &lt;- colorRampPalette(c(&quot;#2166AC&quot;, &quot;#F7F7F7&quot;, &
 pheatmap(mat, annotation_col = anno, annotation_colors = ann_colors, scale = &quot;row&quot;,
          labels_row = namesDat$hgnc_symbol, color = heat_colors, labels_col = rep(&quot;&quot;, ncol(mat)))</code></pre>
 <p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20heatmap-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-heatmap-1">
+Past versions of "top 50 BMP_48h vs BMP_24h heatmap-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-heatmap-1"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h heatmap-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="top-50-indiv-counts-1" class="section level3">
 <h3>top 50 indiv counts</h3>
@@ -1026,7 +3579,1956 @@ for(ID in topGenesID){
              col=colCond[factor(dds$stim)],
              pch = 19)
 }</code></pre>
-<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-1.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-2.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-3.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-4.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-5.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-6.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-7.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-8.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-9.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-10.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-11.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-12.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-13.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-14.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-15.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-16.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-17.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-18.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-19.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-20.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-21.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-22.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-23.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-24.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-25.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-26.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-27.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-28.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-29.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-30.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-31.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-32.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-33.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-34.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-35.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-36.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-37.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-38.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-39.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-40.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-41.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-42.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-43.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-44.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-45.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-46.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-47.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-48.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-49.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-50.png" width="576" style="display: block; margin: auto;" /></p>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-1">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-1"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-2.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-2">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-2"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-2.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-3.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-3">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-3.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-3"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-3.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-4.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-4">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-4.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-4"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-4.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-5.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-5">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-5.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-5"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-5.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-6.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-6">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-6.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-6"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-6.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-7.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-7">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-7.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-7"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-7.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-8.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-8">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-8.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-8"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-8.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-9.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-9">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-9.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-9"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-9.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-10.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-10">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-10.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-10"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-10.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-11.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-11">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-11.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-11"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-11.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-12.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-12">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-12.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-12"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-12.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-13.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-13">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-13.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-13"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-13.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-14.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-14">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-14.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-14"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-14.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-15.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-15">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-15.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-15"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-15.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-16.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-16">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-16.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-16"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-16.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-17.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-17">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-17.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-17"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-17.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-18.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-18">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-18.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-18"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-18.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-19.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-19">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-19.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-19"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-19.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-20.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-20">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-20.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-20"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-20.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-21.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-21">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-21.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-21"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-21.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-22.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-22">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-22.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-22"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-22.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-23.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-23">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-23.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-23"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-23.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-24.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-24">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-24.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-24"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-24.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-25.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-25">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-25.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-25"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-25.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-26.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-26">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-26.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-26"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-26.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-27.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-27">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-27.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-27"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-27.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-28.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-28">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-28.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-28"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-28.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-29.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-29">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-29.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-29"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-29.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-30.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-30">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-30.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-30"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-30.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-31.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-31">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-31.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-31"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-31.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-32.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-32">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-32.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-32"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-32.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-33.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-33">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-33.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-33"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-33.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-34.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-34">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-34.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-34"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-34.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-35.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-35">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-35.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-35"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-35.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-36.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-36">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-36.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-36"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-36.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-37.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-37">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-37.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-37"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-37.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-38.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-38">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-38.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-38"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-38.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-39.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-39">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-39.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-39"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-39.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-40.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-40">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-40.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-40"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-40.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-41.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-41">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-41.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-41"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-41.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-42.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-42">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-42.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-42"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-42.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-43.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-43">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-43.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-43"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-43.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-44.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-44">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-44.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-44"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-44.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-45.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-45">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-45.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-45"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-45.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-46.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-46">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-46.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-46"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-46.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-47.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-47">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-47.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-47"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-47.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-48.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-48">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-48.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-48"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-48.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-49.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-49">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-49.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-49"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-49.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/CM.Rmd/top%2050%20BMP_48h%20vs%20BMP_24h%20indiv%20counts-50.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-50">
+Past versions of "top 50 BMP_48h vs BMP_24h indiv counts-50.png"
+</button>
+</p>
+<div id="fig-no-spaces-top-50-BMP_48h-vs-BMP_24h-indiv-counts-50"
+class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/top 50 BMP_48h vs BMP_24h indiv counts-50.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="vulcano-1" class="section level3">
 <h3>vulcano</h3>
@@ -1042,6 +5544,57 @@ EnhancedVolcano(res,
     title = &quot;DeSEQ2 results&quot;,
     subtitle = bquote(italic(&quot;BMP_48h vs BMP_24h&quot;)))</code></pre>
 <p><img src="figure/CM.Rmd/vulcano%20BMP_48h%20vs%20BMP_24h-1.png" width="1248" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-vulcano-BMP_48h-vs-BMP_24h-1">
+Past versions of "vulcano BMP_48h vs BMP_24h-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-vulcano-BMP_48h-vs-BMP_24h-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/0e513f302cc24612a18d930198d76c7afb23851d/docs/figure/CM.Rmd/vulcano BMP_48h vs BMP_24h-1.png" target="_blank">0e513f3</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="plot-selected-genes" class="section level2">
+<h2>plot selected genes</h2>
+<div id="indiv-counts" class="section level3">
+<h3>indiv counts</h3>
+<pre class="r"><code>sel_genes &lt;- c(&quot;ENSG00000019991&quot;, &quot;ENSG00000125378&quot;, &quot;ENSG00000107779&quot;, &quot;ENSG00000138696&quot;, &quot;ENSG00000180875&quot;, &quot;ENSG00000105976&quot;)
+
+for(ID in sel_genes){
+  symbol &lt;- G_list$hgnc_symbol[which(G_list$ensembl_gene_id == ID)]
+  plotCounts(dds, gene = ID, intgroup=c(&quot;stim&quot;), main = symbol, col=colCond[factor(dds$stim)],
+             pch = 19)
+}</code></pre>
+<p><img src="figure/CM.Rmd/sel%20genes-1.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/sel%20genes-2.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/sel%20genes-3.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/sel%20genes-4.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/sel%20genes-5.png" width="576" style="display: block; margin: auto;" /><img src="figure/CM.Rmd/sel%20genes-6.png" width="576" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="session-info" class="section level2">
@@ -1083,7 +5636,7 @@ loaded via a namespace (and not attached):
   [7] R.oo_1.27.1              polyclip_1.10-7          preprocessCore_1.66.0   
  [10] XML_3.99-0.18            lifecycle_1.0.4          httr2_1.1.2             
  [13] rstatix_0.7.2            rprojroot_2.0.4          vroom_1.6.5             
- [16] lattice_0.22-7           ensembldb_2.28.1         MASS_7.3-65             
+ [16] MASS_7.3-65              lattice_0.22-7           ensembldb_2.28.1        
  [19] backports_1.5.0          magrittr_2.0.3           limma_3.60.6            
  [22] sass_0.4.10              rmarkdown_2.29           jquerylib_0.1.4         
  [25] yaml_2.3.10              httpuv_1.6.16            cowplot_1.1.3           
@@ -1106,33 +5659,33 @@ loaded via a namespace (and not attached):
  [76] R.methodsS3_1.8.2        hexbin_1.28.5            generics_0.1.4          
  [79] data.table_1.17.2        rtracklayer_1.64.0       graphlayouts_1.2.2      
  [82] prettyunits_1.2.0        httr_1.4.7               S4Arrays_1.4.1          
- [85] scatterpie_0.2.4         pkgconfig_2.0.3          gtable_0.3.6            
- [88] blob_1.2.4               workflowr_1.7.1          XVector_0.44.0          
- [91] shadowtext_0.1.4         htmltools_0.5.8.1        carData_3.0-5           
- [94] fgsea_1.30.0             msigdbdf_24.1.1          ProtGenerics_1.36.0     
- [97] scales_1.4.0             png_0.1-8                ggfun_0.1.8             
-[100] knitr_1.50               rstudioapi_0.17.1        tzdb_0.5.0              
-[103] reshape2_1.4.4           rjson_0.2.23             nlme_3.1-168            
-[106] curl_6.2.2               cachem_1.1.0             BiocVersion_3.19.1      
-[109] parallel_4.4.0           AnnotationDbi_1.66.0     restfulr_0.0.15         
-[112] pillar_1.10.2            grid_4.4.0               vctrs_0.6.5             
-[115] promises_1.3.2           car_3.1-3                dbplyr_2.5.0            
-[118] tximport_1.32.0          evaluate_1.0.3           GenomicFeatures_1.56.0  
-[121] cli_3.6.5                locfit_1.5-9.12          compiler_4.4.0          
-[124] Rsamtools_2.20.0         rlang_1.1.6              crayon_1.5.3            
-[127] ggsignif_0.6.4           labeling_0.4.3           affy_1.82.0             
-[130] plyr_1.8.9               fs_1.6.6                 stringi_1.8.7           
-[133] viridisLite_0.4.2        BiocParallel_1.38.0      assertthat_0.2.1        
-[136] babelgene_22.9           txdbmaker_1.0.1          Biostrings_2.72.1       
-[139] lazyeval_0.2.2           GOSemSim_2.30.2          Matrix_1.7-3            
-[142] patchwork_1.3.0          hms_1.1.3                bit64_4.6.0-1           
-[145] KEGGREST_1.44.1          statmod_1.5.0            AnnotationHub_3.12.0    
-[148] broom_1.0.8              igraph_2.1.4             memoise_2.0.1           
-[151] affyio_1.74.0            bslib_0.9.0              ggtree_3.12.0           
-[154] fastmatch_1.1-6          bit_4.6.0                gson_0.1.0              
-[157] ape_5.8-1               </code></pre>
+ [85] scatterpie_0.2.4         whisker_0.4.1            pkgconfig_2.0.3         
+ [88] gtable_0.3.6             blob_1.2.4               workflowr_1.7.1         
+ [91] XVector_0.44.0           shadowtext_0.1.4         htmltools_0.5.8.1       
+ [94] carData_3.0-5            fgsea_1.30.0             msigdbdf_24.1.1         
+ [97] ProtGenerics_1.36.0      scales_1.4.0             png_0.1-8               
+[100] ggfun_0.1.8              knitr_1.50               rstudioapi_0.17.1       
+[103] tzdb_0.5.0               reshape2_1.4.4           rjson_0.2.23            
+[106] nlme_3.1-168             curl_6.2.2               cachem_1.1.0            
+[109] BiocVersion_3.19.1       parallel_4.4.0           AnnotationDbi_1.66.0    
+[112] restfulr_0.0.15          pillar_1.10.2            grid_4.4.0              
+[115] vctrs_0.6.5              promises_1.3.2           car_3.1-3               
+[118] dbplyr_2.5.0             tximport_1.32.0          evaluate_1.0.3          
+[121] GenomicFeatures_1.56.0   cli_3.6.5                locfit_1.5-9.12         
+[124] compiler_4.4.0           Rsamtools_2.20.0         rlang_1.1.6             
+[127] crayon_1.5.3             ggsignif_0.6.4           labeling_0.4.3          
+[130] affy_1.82.0              plyr_1.8.9               fs_1.6.6                
+[133] stringi_1.8.7            viridisLite_0.4.2        BiocParallel_1.38.0     
+[136] assertthat_0.2.1         babelgene_22.9           txdbmaker_1.0.1         
+[139] Biostrings_2.72.1        lazyeval_0.2.2           GOSemSim_2.30.2         
+[142] Matrix_1.7-3             patchwork_1.3.0          hms_1.1.3               
+[145] bit64_4.6.0-1            KEGGREST_1.44.1          statmod_1.5.0           
+[148] AnnotationHub_3.12.0     broom_1.0.8              igraph_2.1.4            
+[151] memoise_2.0.1            affyio_1.74.0            bslib_0.9.0             
+[154] ggtree_3.12.0            fastmatch_1.1-6          bit_4.6.0               
+[157] gson_0.1.0               ape_5.8-1               </code></pre>
 <pre class="r"><code>date()</code></pre>
-<pre><code>[1] &quot;Thu Jun 12 11:30:36 2025&quot;</code></pre>
+<pre><code>[1] &quot;Thu Jun 12 14:29:44 2025&quot;</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1178,7 +5731,7 @@ loaded via a namespace (and not attached):
   [7] R.oo_1.27.1              polyclip_1.10-7          preprocessCore_1.66.0   
  [10] XML_3.99-0.18            lifecycle_1.0.4          httr2_1.1.2             
  [13] rstatix_0.7.2            rprojroot_2.0.4          vroom_1.6.5             
- [16] lattice_0.22-7           ensembldb_2.28.1         MASS_7.3-65             
+ [16] MASS_7.3-65              lattice_0.22-7           ensembldb_2.28.1        
  [19] backports_1.5.0          magrittr_2.0.3           limma_3.60.6            
  [22] sass_0.4.10              rmarkdown_2.29           jquerylib_0.1.4         
  [25] yaml_2.3.10              httpuv_1.6.16            cowplot_1.1.3           
@@ -1201,31 +5754,31 @@ loaded via a namespace (and not attached):
  [76] R.methodsS3_1.8.2        hexbin_1.28.5            generics_0.1.4          
  [79] data.table_1.17.2        rtracklayer_1.64.0       graphlayouts_1.2.2      
  [82] prettyunits_1.2.0        httr_1.4.7               S4Arrays_1.4.1          
- [85] scatterpie_0.2.4         pkgconfig_2.0.3          gtable_0.3.6            
- [88] blob_1.2.4               workflowr_1.7.1          XVector_0.44.0          
- [91] shadowtext_0.1.4         htmltools_0.5.8.1        carData_3.0-5           
- [94] fgsea_1.30.0             msigdbdf_24.1.1          ProtGenerics_1.36.0     
- [97] scales_1.4.0             png_0.1-8                ggfun_0.1.8             
-[100] knitr_1.50               rstudioapi_0.17.1        tzdb_0.5.0              
-[103] reshape2_1.4.4           rjson_0.2.23             nlme_3.1-168            
-[106] curl_6.2.2               cachem_1.1.0             BiocVersion_3.19.1      
-[109] parallel_4.4.0           AnnotationDbi_1.66.0     restfulr_0.0.15         
-[112] pillar_1.10.2            grid_4.4.0               vctrs_0.6.5             
-[115] promises_1.3.2           car_3.1-3                dbplyr_2.5.0            
-[118] tximport_1.32.0          evaluate_1.0.3           GenomicFeatures_1.56.0  
-[121] cli_3.6.5                locfit_1.5-9.12          compiler_4.4.0          
-[124] Rsamtools_2.20.0         rlang_1.1.6              crayon_1.5.3            
-[127] ggsignif_0.6.4           labeling_0.4.3           affy_1.82.0             
-[130] plyr_1.8.9               fs_1.6.6                 stringi_1.8.7           
-[133] viridisLite_0.4.2        BiocParallel_1.38.0      assertthat_0.2.1        
-[136] babelgene_22.9           txdbmaker_1.0.1          Biostrings_2.72.1       
-[139] lazyeval_0.2.2           GOSemSim_2.30.2          Matrix_1.7-3            
-[142] patchwork_1.3.0          hms_1.1.3                bit64_4.6.0-1           
-[145] KEGGREST_1.44.1          statmod_1.5.0            AnnotationHub_3.12.0    
-[148] broom_1.0.8              igraph_2.1.4             memoise_2.0.1           
-[151] affyio_1.74.0            bslib_0.9.0              ggtree_3.12.0           
-[154] fastmatch_1.1-6          bit_4.6.0                gson_0.1.0              
-[157] ape_5.8-1               </code></pre>
+ [85] scatterpie_0.2.4         whisker_0.4.1            pkgconfig_2.0.3         
+ [88] gtable_0.3.6             blob_1.2.4               workflowr_1.7.1         
+ [91] XVector_0.44.0           shadowtext_0.1.4         htmltools_0.5.8.1       
+ [94] carData_3.0-5            fgsea_1.30.0             msigdbdf_24.1.1         
+ [97] ProtGenerics_1.36.0      scales_1.4.0             png_0.1-8               
+[100] ggfun_0.1.8              knitr_1.50               rstudioapi_0.17.1       
+[103] tzdb_0.5.0               reshape2_1.4.4           rjson_0.2.23            
+[106] nlme_3.1-168             curl_6.2.2               cachem_1.1.0            
+[109] BiocVersion_3.19.1       parallel_4.4.0           AnnotationDbi_1.66.0    
+[112] restfulr_0.0.15          pillar_1.10.2            grid_4.4.0              
+[115] vctrs_0.6.5              promises_1.3.2           car_3.1-3               
+[118] dbplyr_2.5.0             tximport_1.32.0          evaluate_1.0.3          
+[121] GenomicFeatures_1.56.0   cli_3.6.5                locfit_1.5-9.12         
+[124] compiler_4.4.0           Rsamtools_2.20.0         rlang_1.1.6             
+[127] crayon_1.5.3             ggsignif_0.6.4           labeling_0.4.3          
+[130] affy_1.82.0              plyr_1.8.9               fs_1.6.6                
+[133] stringi_1.8.7            viridisLite_0.4.2        BiocParallel_1.38.0     
+[136] assertthat_0.2.1         babelgene_22.9           txdbmaker_1.0.1         
+[139] Biostrings_2.72.1        lazyeval_0.2.2           GOSemSim_2.30.2         
+[142] Matrix_1.7-3             patchwork_1.3.0          hms_1.1.3               
+[145] bit64_4.6.0-1            KEGGREST_1.44.1          statmod_1.5.0           
+[148] AnnotationHub_3.12.0     broom_1.0.8              igraph_2.1.4            
+[151] memoise_2.0.1            affyio_1.74.0            bslib_0.9.0             
+[154] ggtree_3.12.0            fastmatch_1.1-6          bit_4.6.0               
+[157] gson_0.1.0               ape_5.8-1               </code></pre>
 </div>
 </div>
 </div>

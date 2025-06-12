@@ -415,7 +415,7 @@ EnhancedVolcano(res,
 ### indiv counts
 ```{r sel genes, fig.height=4, fig.width=6}
 
-sel_genes <- c("ENSG00000019991", "ENSG00000125378", "ENSG00000107779", "ENSG00000138696", "ENSG00000105976", "ENSG00000282046", "ENSG00000180875")
+sel_genes <- c("ENSG00000019991", "ENSG00000125378", "ENSG00000107779", "ENSG00000138696", "ENSG00000180875", "ENSG00000105976")
 
 for(ID in sel_genes){
   symbol <- G_list$hgnc_symbol[which(G_list$ensembl_gene_id == ID)]
