@@ -542,15 +542,15 @@ data
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree0e513f302cc24612a18d930198d76c7afb23851dtargetblank0e513f3a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree3cf6b9a6018e85908ed8701a3b5c235e53bcc929targetblank3cf6b9aa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/angeldemartin/NC_HTx_02/tree/0e513f302cc24612a18d930198d76c7afb23851d" target="_blank">0e513f3</a>
+<a href="https://github.com/angeldemartin/NC_HTx_02/tree/3cf6b9a6018e85908ed8701a3b5c235e53bcc929" target="_blank">3cf6b9a</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree0e513f302cc24612a18d930198d76c7afb23851dtargetblank0e513f3a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree3cf6b9a6018e85908ed8701a3b5c235e53bcc929targetblank3cf6b9aa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -560,7 +560,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/angeldemartin/NC_HTx_02/tree/0e513f302cc24612a18d930198d76c7afb23851d" target="_blank">0e513f3</a>.
+<a href="https://github.com/angeldemartin/NC_HTx_02/tree/3cf6b9a6018e85908ed8701a3b5c235e53bcc929" target="_blank">3cf6b9a</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -626,6 +626,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/3cf6b9a6018e85908ed8701a3b5c235e53bcc929/analysis/CF.Rmd" target="_blank">3cf6b9a</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+<td>
+june12.2
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/angeldemartin/NC_HTx_02/3cf6b9a6018e85908ed8701a3b5c235e53bcc929/docs/CF.html" target="_blank">3cf6b9a</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+<td>
+june12.2
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -5673,6 +5707,20 @@ angeldemartin
 </div>
 </div>
 </div>
+<div id="plot-selected-genes" class="section level2">
+<h2>plot selected genes</h2>
+<div id="indiv-counts" class="section level3">
+<h3>indiv counts</h3>
+<pre class="r"><code>sel_genes &lt;- c(&quot;ENSG00000019991&quot;, &quot;ENSG00000125378&quot;, &quot;ENSG00000107779&quot;, &quot;ENSG00000138696&quot;, &quot;ENSG00000105976&quot;, &quot;ENSG00000282046&quot;, &quot;ENSG00000180875&quot;)
+
+for(ID in sel_genes){
+  symbol &lt;- G_list$hgnc_symbol[which(G_list$ensembl_gene_id == ID)]
+  plotCounts(dds, gene = ID, intgroup=c(&quot;stim&quot;), main = symbol, col=colCond[factor(dds$stim)],
+             pch = 19)
+}</code></pre>
+<p><img src="figure/CF.Rmd/sel%20genes-1.png" width="576" style="display: block; margin: auto;" /><img src="figure/CF.Rmd/sel%20genes-2.png" width="576" style="display: block; margin: auto;" /><img src="figure/CF.Rmd/sel%20genes-3.png" width="576" style="display: block; margin: auto;" /><img src="figure/CF.Rmd/sel%20genes-4.png" width="576" style="display: block; margin: auto;" /><img src="figure/CF.Rmd/sel%20genes-5.png" width="576" style="display: block; margin: auto;" /><img src="figure/CF.Rmd/sel%20genes-6.png" width="576" style="display: block; margin: auto;" /><img src="figure/CF.Rmd/sel%20genes-7.png" width="576" style="display: block; margin: auto;" /></p>
+</div>
+</div>
 <div id="session-info" class="section level2">
 <h2>session info</h2>
 <pre class="r"><code>sessionInfo()</code></pre>
@@ -5761,7 +5809,7 @@ loaded via a namespace (and not attached):
 [154] ggtree_3.12.0            fastmatch_1.1-6          bit_4.6.0               
 [157] gson_0.1.0               ape_5.8-1               </code></pre>
 <pre class="r"><code>date()</code></pre>
-<pre><code>[1] &quot;Thu Jun 12 12:56:37 2025&quot;</code></pre>
+<pre><code>[1] &quot;Thu Jun 12 13:24:05 2025&quot;</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
