@@ -290,6 +290,72 @@ EnhancedVolcano(res,
     subtitle = bquote(italic("BMP4 vs ctr")))
 ```
 
+### pathway analysis
+```{r pathway anaysis BMP vs ctr, fig.height=8, fig.width=10}
+rankedGenes <- resDat %>%
+  filter(!is.na(ensembl_gene_id)) %>%
+  mutate(rank = log2FoldChange) %>%
+  arrange(desc(rank)) %>%
+  pull(rank, ensembl_gene_id)
+
+head(rankedGenes)
+
+rankedGenes <- resDat %>%
+  filter(!is.na(ensembl_gene_id)) %>%
+  mutate(rank = -log10({pvalue}) * sign({log2FoldChange})) %>%
+  filter(!is.na(rank)) %>% 
+  arrange(desc(rank)) %>%
+  pull(rank, ensembl_gene_id)
+
+head(rankedGenes)
+
+
+term2gene <- msigdbr(species = "Homo sapiens", category = "H") %>% 
+  dplyr::select(gs_name, ensembl_gene)
+term2name <- msigdbr(species = "Homo sapiens", category = "H") %>% 
+  dplyr::select(gs_name, gs_description) %>% 
+  distinct()
+
+gseaRes <- GSEA(rankedGenes,
+                TERM2GENE = term2gene,
+                TERM2NAME = term2name,
+                pvalueCutoff = 1.00, 
+                minGSSize = 5,
+                maxGSSize = 500)
+
+gseaResDat <- gseaRes@result
+
+as_tibble(gseaRes) %>% 
+  arrange(desc(abs(NES))) %>% 
+  top_n(20, wt=-p.adjust) %>% 
+  dplyr::select(-core_enrichment) %>%
+  mutate(across(c("enrichmentScore", "NES"), round, digits=3)) %>% 
+  mutate(across(c("pvalue", "p.adjust", "qvalue"), scales::scientific))
+```
+
+```{r pathway anaysis BMP vs ctr-2, fig.height=15, fig.width=10}
+dotplot(gseaRes, showCategory=10, split=".sign") + facet_grid(.~.sign)
+```
+
+```{r pathway anaysis BMP vs ctr-3, fig.height=5, fig.width=10}
+selGODat <- gseaResDat %>% 
+  arrange(desc(abs(NES))) %>% 
+  top_n(20, wt=-p.adjust) %>% 
+  mutate(qscore=-log(p.adjust, base=10)) %>% 
+  mutate(cluster="BMP")
+
+p <- ggbarplot(selGODat, x = "ID", y = "qscore",
+          fill = "cluster",               
+          color = "cluster",            
+          palette = colCond2,            
+          sort.val = "asc",           
+          sort.by.groups = TRUE      
+          #x.text.angle = 90           
+          ) + 
+  rotate()
+p
+```
+
 ## BMP_24h vs BMP_48h
 ### construct a DESeqDataSet stim
 ```{r construct DESeqDataSet object stim}

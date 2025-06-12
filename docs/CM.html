@@ -542,15 +542,15 @@ data
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree6e02f0ad5d90fbd80ebeb1b567cadba6ce4d51fftargetblank6e02f0aa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree76fd54f9aa69269e8f8f3141b7305cb049bca0a1targetblank76fd54fa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/angeldemartin/NC_HTx_02/tree/6e02f0ad5d90fbd80ebeb1b567cadba6ce4d51ff" target="_blank">6e02f0a</a>
+<a href="https://github.com/angeldemartin/NC_HTx_02/tree/76fd54f9aa69269e8f8f3141b7305cb049bca0a1" target="_blank">76fd54f</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree6e02f0ad5d90fbd80ebeb1b567cadba6ce4d51fftargetblank6e02f0aa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomangeldemartinNCHTx02tree76fd54f9aa69269e8f8f3141b7305cb049bca0a1targetblank76fd54fa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -560,7 +560,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/angeldemartin/NC_HTx_02/tree/6e02f0ad5d90fbd80ebeb1b567cadba6ce4d51ff" target="_blank">6e02f0a</a>.
+<a href="https://github.com/angeldemartin/NC_HTx_02/tree/76fd54f9aa69269e8f8f3141b7305cb049bca0a1" target="_blank">76fd54f</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -582,6 +582,7 @@ Ignored files:
     Ignored:    data/Ref/
 
 Unstaged changes:
+    Modified:   analysis/CF.Rmd
     Modified:   analysis/CM.Rmd
 
 </code></pre>
@@ -626,6 +627,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/angeldemartin/NC_HTx_02/blob/76fd54f9aa69269e8f8f3141b7305cb049bca0a1/analysis/CM.Rmd" target="_blank">76fd54f</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+<td>
+june12.4
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/angeldemartin/NC_HTx_02/76fd54f9aa69269e8f8f3141b7305cb049bca0a1/docs/CM.html" target="_blank">76fd54f</a>
+</td>
+<td>
+angeldemartin
+</td>
+<td>
+2025-06-12
+</td>
+<td>
+june12.4
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -3346,6 +3381,82 @@ angeldemartin
 </div>
 </div>
 </div>
+<div id="pathway-analysis" class="section level3">
+<h3>pathway analysis</h3>
+<pre class="r"><code>rankedGenes &lt;- resDat %&gt;%
+  filter(!is.na(ensembl_gene_id)) %&gt;%
+  mutate(rank = log2FoldChange) %&gt;%
+  arrange(desc(rank)) %&gt;%
+  pull(rank, ensembl_gene_id)
+
+head(rankedGenes)</code></pre>
+<pre><code>ENSG00000160325 ENSG00000262599 ENSG00000083896 ENSG00000206258 ENSG00000276438 ENSG00000256861 
+      24.474950       11.172650        7.517436        6.658061        6.620793        6.480138 </code></pre>
+<pre class="r"><code>rankedGenes &lt;- resDat %&gt;%
+  filter(!is.na(ensembl_gene_id)) %&gt;%
+  mutate(rank = -log10({pvalue}) * sign({log2FoldChange})) %&gt;%
+  filter(!is.na(rank)) %&gt;% 
+  arrange(desc(rank)) %&gt;%
+  pull(rank, ensembl_gene_id)
+
+head(rankedGenes)</code></pre>
+<pre><code>ENSG00000137834 ENSG00000125170 ENSG00000115738 ENSG00000168672 ENSG00000196177 ENSG00000088367 
+      148.09277       113.59534        93.82799        81.07995        76.74453        76.61381 </code></pre>
+<pre class="r"><code>term2gene &lt;- msigdbr(species = &quot;Homo sapiens&quot;, category = &quot;H&quot;) %&gt;% 
+  dplyr::select(gs_name, ensembl_gene)
+term2name &lt;- msigdbr(species = &quot;Homo sapiens&quot;, category = &quot;H&quot;) %&gt;% 
+  dplyr::select(gs_name, gs_description) %&gt;% 
+  distinct()
+
+gseaRes &lt;- GSEA(rankedGenes,
+                TERM2GENE = term2gene,
+                TERM2NAME = term2name,
+                pvalueCutoff = 1.00, 
+                minGSSize = 5,
+                maxGSSize = 500)
+
+gseaResDat &lt;- gseaRes@result
+
+as_tibble(gseaRes) %&gt;% 
+  arrange(desc(abs(NES))) %&gt;% 
+  top_n(20, wt=-p.adjust) %&gt;% 
+  dplyr::select(-core_enrichment) %&gt;%
+  mutate(across(c(&quot;enrichmentScore&quot;, &quot;NES&quot;), round, digits=3)) %&gt;% 
+  mutate(across(c(&quot;pvalue&quot;, &quot;p.adjust&quot;, &quot;qvalue&quot;), scales::scientific))</code></pre>
+<pre><code># A tibble: 28 × 10
+   ID            Description setSize enrichmentScore   NES pvalue p.adjust qvalue  rank leading_edge
+   &lt;chr&gt;         &lt;chr&gt;         &lt;int&gt;           &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;       
+ 1 HALLMARK_TGF… Genes up-r…      53           0.914  2.09 1.62e… 8.12e-05 7.69e…   485 tags=25%, l…
+ 2 HALLMARK_KRA… Genes up-r…     147           0.619  1.60 3.05e… 4.10e-01 3.88e…   912 tags=12%, l…
+ 3 HALLMARK_APO… Genes medi…     144           0.604  1.56 4.10e… 4.10e-01 3.88e…   837 tags=13%, l…
+ 4 HALLMARK_TNF… Genes regu…     168           0.586  1.53 3.59e… 4.10e-01 3.88e…  1203 tags=18%, l…
+ 5 HALLMARK_WNT… Genes up-r…      38           0.675  1.48 9.25e… 4.85e-01 4.60e…  1023 tags=18%, l…
+ 6 HALLMARK_COA… Genes enco…      95           0.584  1.45 7.99e… 4.85e-01 4.60e…   661 tags=14%, l…
+ 7 HALLMARK_HED… Genes up-r…      33          -0.577 -1.44 1.01e… 4.85e-01 4.60e…  1140 tags=21%, l…
+ 8 HALLMARK_UV_… Genes down…     141           0.558  1.43 6.46e… 4.85e-01 4.60e…   926 tags=15%, l…
+ 9 HALLMARK_EST… Genes defi…     161           0.54   1.40 7.41e… 4.85e-01 4.60e…   724 tags=12%, l…
+10 HALLMARK_PER… Genes enco…      89          -0.454 -1.32 1.07e… 4.85e-01 4.60e…  2227 tags=25%, l…
+# ℹ 18 more rows</code></pre>
+<pre class="r"><code>dotplot(gseaRes, showCategory=10, split=&quot;.sign&quot;) + facet_grid(.~.sign)</code></pre>
+<p><img src="figure/CM.Rmd/pathway%20anaysis%20BMP%20vs%20ctr-2-1.png" width="960" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>selGODat &lt;- gseaResDat %&gt;% 
+  arrange(desc(abs(NES))) %&gt;% 
+  top_n(20, wt=-p.adjust) %&gt;% 
+  mutate(qscore=-log(p.adjust, base=10)) %&gt;% 
+  mutate(cluster=&quot;BMP&quot;)
+
+p &lt;- ggbarplot(selGODat, x = &quot;ID&quot;, y = &quot;qscore&quot;,
+          fill = &quot;cluster&quot;,               
+          color = &quot;cluster&quot;,            
+          palette = colCond2,            
+          sort.val = &quot;asc&quot;,           
+          sort.by.groups = TRUE      
+          #x.text.angle = 90           
+          ) + 
+  rotate()
+p</code></pre>
+<p><img src="figure/CM.Rmd/pathway%20anaysis%20BMP%20vs%20ctr-3-1.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
 </div>
 <div id="bmp_24h-vs-bmp_48h" class="section level2">
 <h2>BMP_24h vs BMP_48h</h2>
@@ -5919,36 +6030,36 @@ loaded via a namespace (and not attached):
  [67] BiocManager_1.30.25      fastmap_1.2.0            digest_0.6.37           
  [70] gridGraphics_0.5-1       timechange_0.3.0         R6_2.6.1                
  [73] colorspace_2.1-1         GO.db_3.19.1             RSQLite_2.3.11          
- [76] R.methodsS3_1.8.2        hexbin_1.28.5            generics_0.1.4          
- [79] data.table_1.17.2        rtracklayer_1.64.0       graphlayouts_1.2.2      
- [82] prettyunits_1.2.0        httr_1.4.7               S4Arrays_1.4.1          
- [85] scatterpie_0.2.4         whisker_0.4.1            pkgconfig_2.0.3         
- [88] gtable_0.3.6             blob_1.2.4               workflowr_1.7.1         
- [91] XVector_0.44.0           shadowtext_0.1.4         htmltools_0.5.8.1       
- [94] carData_3.0-5            fgsea_1.30.0             msigdbdf_24.1.1         
- [97] ProtGenerics_1.36.0      scales_1.4.0             png_0.1-8               
-[100] ggfun_0.1.8              knitr_1.50               rstudioapi_0.17.1       
-[103] tzdb_0.5.0               reshape2_1.4.4           rjson_0.2.23            
-[106] nlme_3.1-168             curl_6.2.2               cachem_1.1.0            
-[109] BiocVersion_3.19.1       parallel_4.4.0           AnnotationDbi_1.66.0    
-[112] restfulr_0.0.15          pillar_1.10.2            grid_4.4.0              
-[115] vctrs_0.6.5              promises_1.3.2           car_3.1-3               
-[118] dbplyr_2.5.0             tximport_1.32.0          evaluate_1.0.3          
-[121] GenomicFeatures_1.56.0   cli_3.6.5                locfit_1.5-9.12         
-[124] compiler_4.4.0           Rsamtools_2.20.0         rlang_1.1.6             
-[127] crayon_1.5.3             ggsignif_0.6.4           labeling_0.4.3          
-[130] affy_1.82.0              plyr_1.8.9               fs_1.6.6                
-[133] stringi_1.8.7            viridisLite_0.4.2        BiocParallel_1.38.0     
-[136] assertthat_0.2.1         babelgene_22.9           txdbmaker_1.0.1         
-[139] Biostrings_2.72.1        lazyeval_0.2.2           GOSemSim_2.30.2         
-[142] Matrix_1.7-3             patchwork_1.3.0          hms_1.1.3               
-[145] bit64_4.6.0-1            KEGGREST_1.44.1          statmod_1.5.0           
-[148] AnnotationHub_3.12.0     broom_1.0.8              igraph_2.1.4            
-[151] memoise_2.0.1            affyio_1.74.0            bslib_0.9.0             
-[154] ggtree_3.12.0            fastmatch_1.1-6          bit_4.6.0               
-[157] gson_0.1.0               ape_5.8-1               </code></pre>
+ [76] R.methodsS3_1.8.2        utf8_1.2.5               hexbin_1.28.5           
+ [79] generics_0.1.4           data.table_1.17.2        rtracklayer_1.64.0      
+ [82] graphlayouts_1.2.2       prettyunits_1.2.0        httr_1.4.7              
+ [85] S4Arrays_1.4.1           scatterpie_0.2.4         whisker_0.4.1           
+ [88] pkgconfig_2.0.3          gtable_0.3.6             blob_1.2.4              
+ [91] workflowr_1.7.1          XVector_0.44.0           shadowtext_0.1.4        
+ [94] htmltools_0.5.8.1        carData_3.0-5            fgsea_1.30.0            
+ [97] msigdbdf_24.1.1          ProtGenerics_1.36.0      scales_1.4.0            
+[100] png_0.1-8                ggfun_0.1.8              knitr_1.50              
+[103] rstudioapi_0.17.1        tzdb_0.5.0               reshape2_1.4.4          
+[106] rjson_0.2.23             nlme_3.1-168             curl_6.2.2              
+[109] cachem_1.1.0             BiocVersion_3.19.1       parallel_4.4.0          
+[112] AnnotationDbi_1.66.0     restfulr_0.0.15          pillar_1.10.2           
+[115] grid_4.4.0               vctrs_0.6.5              promises_1.3.2          
+[118] car_3.1-3                dbplyr_2.5.0             tximport_1.32.0         
+[121] evaluate_1.0.3           GenomicFeatures_1.56.0   cli_3.6.5               
+[124] locfit_1.5-9.12          compiler_4.4.0           Rsamtools_2.20.0        
+[127] rlang_1.1.6              crayon_1.5.3             ggsignif_0.6.4          
+[130] labeling_0.4.3           affy_1.82.0              plyr_1.8.9              
+[133] fs_1.6.6                 stringi_1.8.7            viridisLite_0.4.2       
+[136] BiocParallel_1.38.0      assertthat_0.2.1         babelgene_22.9          
+[139] txdbmaker_1.0.1          Biostrings_2.72.1        lazyeval_0.2.2          
+[142] GOSemSim_2.30.2          Matrix_1.7-3             patchwork_1.3.0         
+[145] hms_1.1.3                bit64_4.6.0-1            KEGGREST_1.44.1         
+[148] statmod_1.5.0            AnnotationHub_3.12.0     broom_1.0.8             
+[151] igraph_2.1.4             memoise_2.0.1            affyio_1.74.0           
+[154] bslib_0.9.0              ggtree_3.12.0            fastmatch_1.1-6         
+[157] bit_4.6.0                gson_0.1.0               ape_5.8-1               </code></pre>
 <pre class="r"><code>date()</code></pre>
-<pre><code>[1] &quot;Thu Jun 12 14:51:28 2025&quot;</code></pre>
+<pre><code>[1] &quot;Thu Jun 12 15:49:11 2025&quot;</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -6014,34 +6125,34 @@ loaded via a namespace (and not attached):
  [67] BiocManager_1.30.25      fastmap_1.2.0            digest_0.6.37           
  [70] gridGraphics_0.5-1       timechange_0.3.0         R6_2.6.1                
  [73] colorspace_2.1-1         GO.db_3.19.1             RSQLite_2.3.11          
- [76] R.methodsS3_1.8.2        hexbin_1.28.5            generics_0.1.4          
- [79] data.table_1.17.2        rtracklayer_1.64.0       graphlayouts_1.2.2      
- [82] prettyunits_1.2.0        httr_1.4.7               S4Arrays_1.4.1          
- [85] scatterpie_0.2.4         whisker_0.4.1            pkgconfig_2.0.3         
- [88] gtable_0.3.6             blob_1.2.4               workflowr_1.7.1         
- [91] XVector_0.44.0           shadowtext_0.1.4         htmltools_0.5.8.1       
- [94] carData_3.0-5            fgsea_1.30.0             msigdbdf_24.1.1         
- [97] ProtGenerics_1.36.0      scales_1.4.0             png_0.1-8               
-[100] ggfun_0.1.8              knitr_1.50               rstudioapi_0.17.1       
-[103] tzdb_0.5.0               reshape2_1.4.4           rjson_0.2.23            
-[106] nlme_3.1-168             curl_6.2.2               cachem_1.1.0            
-[109] BiocVersion_3.19.1       parallel_4.4.0           AnnotationDbi_1.66.0    
-[112] restfulr_0.0.15          pillar_1.10.2            grid_4.4.0              
-[115] vctrs_0.6.5              promises_1.3.2           car_3.1-3               
-[118] dbplyr_2.5.0             tximport_1.32.0          evaluate_1.0.3          
-[121] GenomicFeatures_1.56.0   cli_3.6.5                locfit_1.5-9.12         
-[124] compiler_4.4.0           Rsamtools_2.20.0         rlang_1.1.6             
-[127] crayon_1.5.3             ggsignif_0.6.4           labeling_0.4.3          
-[130] affy_1.82.0              plyr_1.8.9               fs_1.6.6                
-[133] stringi_1.8.7            viridisLite_0.4.2        BiocParallel_1.38.0     
-[136] assertthat_0.2.1         babelgene_22.9           txdbmaker_1.0.1         
-[139] Biostrings_2.72.1        lazyeval_0.2.2           GOSemSim_2.30.2         
-[142] Matrix_1.7-3             patchwork_1.3.0          hms_1.1.3               
-[145] bit64_4.6.0-1            KEGGREST_1.44.1          statmod_1.5.0           
-[148] AnnotationHub_3.12.0     broom_1.0.8              igraph_2.1.4            
-[151] memoise_2.0.1            affyio_1.74.0            bslib_0.9.0             
-[154] ggtree_3.12.0            fastmatch_1.1-6          bit_4.6.0               
-[157] gson_0.1.0               ape_5.8-1               </code></pre>
+ [76] R.methodsS3_1.8.2        utf8_1.2.5               hexbin_1.28.5           
+ [79] generics_0.1.4           data.table_1.17.2        rtracklayer_1.64.0      
+ [82] graphlayouts_1.2.2       prettyunits_1.2.0        httr_1.4.7              
+ [85] S4Arrays_1.4.1           scatterpie_0.2.4         whisker_0.4.1           
+ [88] pkgconfig_2.0.3          gtable_0.3.6             blob_1.2.4              
+ [91] workflowr_1.7.1          XVector_0.44.0           shadowtext_0.1.4        
+ [94] htmltools_0.5.8.1        carData_3.0-5            fgsea_1.30.0            
+ [97] msigdbdf_24.1.1          ProtGenerics_1.36.0      scales_1.4.0            
+[100] png_0.1-8                ggfun_0.1.8              knitr_1.50              
+[103] rstudioapi_0.17.1        tzdb_0.5.0               reshape2_1.4.4          
+[106] rjson_0.2.23             nlme_3.1-168             curl_6.2.2              
+[109] cachem_1.1.0             BiocVersion_3.19.1       parallel_4.4.0          
+[112] AnnotationDbi_1.66.0     restfulr_0.0.15          pillar_1.10.2           
+[115] grid_4.4.0               vctrs_0.6.5              promises_1.3.2          
+[118] car_3.1-3                dbplyr_2.5.0             tximport_1.32.0         
+[121] evaluate_1.0.3           GenomicFeatures_1.56.0   cli_3.6.5               
+[124] locfit_1.5-9.12          compiler_4.4.0           Rsamtools_2.20.0        
+[127] rlang_1.1.6              crayon_1.5.3             ggsignif_0.6.4          
+[130] labeling_0.4.3           affy_1.82.0              plyr_1.8.9              
+[133] fs_1.6.6                 stringi_1.8.7            viridisLite_0.4.2       
+[136] BiocParallel_1.38.0      assertthat_0.2.1         babelgene_22.9          
+[139] txdbmaker_1.0.1          Biostrings_2.72.1        lazyeval_0.2.2          
+[142] GOSemSim_2.30.2          Matrix_1.7-3             patchwork_1.3.0         
+[145] hms_1.1.3                bit64_4.6.0-1            KEGGREST_1.44.1         
+[148] statmod_1.5.0            AnnotationHub_3.12.0     broom_1.0.8             
+[151] igraph_2.1.4             memoise_2.0.1            affyio_1.74.0           
+[154] bslib_0.9.0              ggtree_3.12.0            fastmatch_1.1-6         
+[157] bit_4.6.0                gson_0.1.0               ape_5.8-1               </code></pre>
 </div>
 </div>
 </div>
