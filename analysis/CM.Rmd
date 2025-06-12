@@ -94,7 +94,7 @@ saveRDS(gse, file=paste0(basedir, "gse_stimhiPS.rds"))
 gse <- readRDS(file=paste0(basedir, "gse_stimhiPS.rds"))
 ```
 
-## BMP vs ctr
+## sample distance
 ### construct a DESeqDataSet stim
 ```{r construct DESeqDataSet object stim2}
 ##construct a DESeqDataSet object
@@ -180,7 +180,7 @@ ggplot(mds, aes(x = `1`, y = `2`, color = stim, shape = pc)) +
   scale_color_manual(values = colCond) +
   geom_point(size = 4) + coord_fixed() + ggtitle("MDS with rld data")
 ```
-
+## BMP vs ctr
 ### diff expressed in BMP4 vs ctr
 ```{r}
 dds <- DESeq(dds)
